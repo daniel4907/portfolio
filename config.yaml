@@ -1,0 +1,182 @@
+baseURL: "https://valence.cv/"
+languageCode: "en-us"
+title: "Daniel Andrasz - Portfolio"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+Menus:
+  main:
+    - identifier: devlog
+      name: Devlog
+      title: Project devlog
+      url: /devlog
+      weight: 1
+
+params:
+  title: "Daniel Andrasz"
+  description: "Materials Science & Hardware Engineering Student"
+  favicon: "/fav.png"
+
+  useBootstrapCDN: false
+  animate: true
+
+  navbar:
+    align: ms-auto
+    brandName: "Daniel Andrasz"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, I'm"
+    title: "Daniel"
+    subtitle: "Materials Science & Hardware Engineering Student"
+    content: "Undergraduate researcher at UIUC specializing in semiconductor device fabrication, FPGA design, and circuit development. I work on projects ranging from cleanroom wafer fabrication to building custom hardware emulators."
+    image: /images/hero.svg
+    button:
+      enable: true
+      name: "Resume"
+      url: "https://valence.cv/resume/46e4df7e15a8e37ad23c82c5bc9fe045"
+      download: false
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/daniel4907
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/danielandrasz/
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "me.png"
+    content: |-
+      Hi! I am a Materials Engineering student at UIUC. I like being able to make things, whether it is in a microfabrication lab or on a FPGA board.
+
+      I have hands-on experience with cleanroom semiconductor processing and digital system design.
+    skills:
+      enable: true
+      title: "Technologies I work with:"
+      items:
+        - "SystemVerilog/VHDL"
+        - "Python"
+        - "C/C++"
+        - "Vivado/Quartus"
+        - "SolidWorks"
+        - "Linux"
+
+  # Experience (Education/Lab work)
+  experience:
+    enable: true
+    title: "Experience"
+    items:
+      - company: "UIUC"
+        companyUrl: "https://ece.illinois.edu"
+        jobs:
+          - name: "ECE 385 Teaching Assistant"
+            date: "Spring 2026 - Present"
+            content: "Guided 200+ students on FPGA-based digital system design, SystemVerilog RTL implementation, and Vivado synthesis workflows."
+
+          - name: "Photonic Systems Lab Researcher"
+            date: "Fall 2025 - Present"
+            content: "Served as a research assistant focused on semiconductor process development. My research project involves creating a novel fabrication flow using wafer bonding and KOH wet etching to produce and characterize custom silicon device structures"
+
+          - name: "ECE 220 Teaching Assistant"
+            date: "Fall 2024 - Present"
+            content: "Mentored over 300 students per semester in a core computer systems course covering C, C++, and LC-3 Assembly. Responsibilities included providing one-on-one debugging assistance, leading lab sessions, and reinforcing complex programming concepts."
+
+      - company: "Texas A&M University"
+        companyUrl: "https://engineering.tamu.edu/mechanical/index.html"
+        jobs:
+          - name: "Thermal Engineering Group Researcher"
+            date: "Summer 2025"
+            content: "Contributed to a summer research project by fabricating microscale thermal test vehicles in a Class 100/1000 cleanroom. My responsibilities included executing multi-step processes such as photolithography and e-beam evaporation."
+
+  # Education
+  education:
+    enable: true
+    items:
+      - title: "B.S. Materials Science & Engineering"
+        school:
+          name: "University of Illinois Urbana-Champaign"
+          url: "https://matse.illinois.edu"
+        date: "Expected 2027"
+        content: |-
+          Relevant Coursework:
+            - ECE 488: Compound Semiconductors and Devices
+            - ECE 444: IC Device Theory & Fabrication
+            - ECE 385: Digital Systems Laboratory
+            - MSE 405: Microstructure Determination
+
+  # Projects
+  projects:
+    enable: true
+    items:
+      - title: NES Hardware Emulator on FPGA
+        content: Designed and implemented a NES hardware emulator on the Urbana FPGA board with cycle-accurate CPU, PPU, memory and controller interfaces.
+        image: /nes.jpg
+        badges:
+          - "SystemVerilog"
+          - "C++"
+          - "Static Timing Analysis"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/daniel4907/ece385-nes/tree/master
+
+      - title: CMOS Integrated Circuit Wafer
+        content: Processed and characterized CMOS wafers in a cleanroom environment, performing oxidation, lithography, etch, diffusion, and electrical testing.
+        image: wafer.jpg
+        badges:
+          - "Cleanroom"
+          - "Photolithography"
+          - "Metrology"
+
+      - title: Semiconductor Compact Model Extraction Framework
+        content: Python framework for automating semiconductor device characterization that utilizes global optimization algorithms to extract physical parameters.
+        image: parameter.png
+        badges:
+          - "PyTorch"
+          - "Streamlit"
+          - "Semiconductor Physics"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/daniel4907/compact-model-extraction
+
+  # Contact
+  contact:
+    enable: true
+    content: Feel free to reach out regarding anything, I will respond within a couple of hours.
+    btnName: Email Me
+    btnLink: mailto:da22@illinois.edu
+
+  footer:
+    recentPosts:
+      path: "devlog"
+      count: 3
+      title: Recent Projects
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/daniel4907
+      linkedin: https://linkedin.com/in/danielandrasz
